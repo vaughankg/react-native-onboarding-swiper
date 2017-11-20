@@ -74,9 +74,6 @@ class Onboarding extends Component {
           renderItem={this.renderItem}
           keyExtractor={this.keyExtractor}
           onViewableItemsChanged={this.onSwipePageChange}
-          viewabilityConfig={{
-            itemVisiblePercentThreshold: 100,
-          }}
           initialNumToRender={1}
         />
         <Pagination
