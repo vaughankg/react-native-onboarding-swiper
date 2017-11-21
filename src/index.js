@@ -77,6 +77,7 @@ class Onboarding extends Component {
           keyExtractor={this.keyExtractor}
           onViewableItemsChanged={this.onSwipePageChange}
           initialNumToRender={1}
+          scrollEnabled={this.props.scrollEnabled}
         />
         <Pagination
           isLight={isLight}
@@ -114,7 +115,8 @@ Onboarding.propTypes = {
   onSkip: PropTypes.func,
   onDone: PropTypes.func,
   skipLabel: PropTypes.string,
-  onPageChange: PropTypes.func
+  onPageChange: PropTypes.func,
+  scrollEnabled: PropTypes.bool
 };
 
 Onboarding.defaultProps = {
@@ -123,7 +125,8 @@ Onboarding.defaultProps = {
   showNext: true,
   showDone: true,
   skipLabel: 'Skip',
-  onPageChange: () => {}
+  onPageChange: () => {},
+  scrollEnabled: true
 };
 
 export default Onboarding;
