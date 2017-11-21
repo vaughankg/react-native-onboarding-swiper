@@ -19,6 +19,8 @@ class Onboarding extends Component {
     if (viewableItems[0]) {
       this.setState({ currentPage: viewableItems[0].index });
     }
+
+    this.props.onPageChange(this.state.currentPage)
   };
 
   goNext = () => {
@@ -112,6 +114,7 @@ Onboarding.propTypes = {
   onSkip: PropTypes.func,
   onDone: PropTypes.func,
   skipLabel: PropTypes.string,
+  onPageChange: PropTypes.func
 };
 
 Onboarding.defaultProps = {
@@ -120,6 +123,7 @@ Onboarding.defaultProps = {
   showNext: true,
   showDone: true,
   skipLabel: 'Skip',
+  onPageChange: () => {}
 };
 
 export default Onboarding;
